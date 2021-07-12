@@ -1,0 +1,10 @@
+﻿gce:
+  instance_names: my-test-instance1
+  zone: us-central1-a
+  machine_type: e2-small
+  image: debian-8
+  state: present
+  service_account_email: 230118356661-compute@developer.gserviceaccount.com
+  credentials_file: /home/service-account
+  project_id: trial-josephr
+  disk_size: 10
