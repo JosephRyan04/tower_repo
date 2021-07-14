@@ -1,5 +1,5 @@
 - name: Create GCE instance
-  hosts: localhost
+  hosts: all
   vars:
     service_account_email: 230118356661-compute@developer.gserviceaccount.com
     credentials_file: /home/service-account.json
