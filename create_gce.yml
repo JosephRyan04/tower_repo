@@ -1,0 +1,19 @@
+- name: Create GCE instance
+  hosts: localhost
+  vars:
+    service_account_email: 230118356661-compute@developer.gserviceaccount.com
+    credentials_file: /home/service-account.json
+    project_id: trial-josephr
+  tasks:
+    - name: Create an instance
+      # Basic provisioning example.  Create multiple Debian 8 instances in the
+      # us-central1-a Zone of n1-standard-1 machine type.
+      gce:
+        instance_names: ansible-provisioned
+        zone: us-central1-a
+        machine_type: n1-standard-1
+        image: debian-8
+        state: present
+        service_account_email: "{{ service_account_email }}"
+        credentials_file: "{{ credentials_file }}"
+        project_id: "{{ project_id }}"
